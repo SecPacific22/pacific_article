@@ -2,10 +2,11 @@
 ---
 
 :root {
-  --font-family-base: {{ site.fonts.base }}, sans-serif;
-  --font-family-heading: {{ site.fonts.heading }}, sans-serif;
-  --font-family-monospace: {{ site.fonts.monospace }}, monospace;
-  --font-family-logo: {{ site.fonts.logo }}, sans-serif;
+  --font-family-base: 'GT Alpina', sans-serif;
+  --font-family-heading: 'GT Alpina', serif;
+  --font-family-monospace: 'RM Mono', monospace;
+  --font-family-logo: 'GT Alpina', sans-serif;
+
 
   --color-primary-bg: {{ site.colors.primary_bg | default: "#2b3af7" }};
   --color-primary-bg-2: {{ site.colors.primary_bg_2 | default: "#424ff8" }};
@@ -20,8 +21,8 @@
   
   --logo-text-font-size: {{ site.logo.logo_text_font_size | default: "28px" }};
   --logo-text-font-weight: {{ site.logo.logo_text_font_weight | default: "500" }};
-
-  --menu-font-family: {{ site.fonts.base }}, sans-serif;
+  
+  --menu-font-family: 'GT Alpina', sans-serif;
   --menu-font-size: {{ site.header.header_menu_font_size }};
   --menu-text-transform: "Capitalize";
   --menu-font-weight: 400;
