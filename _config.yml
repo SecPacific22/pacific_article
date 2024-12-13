@@ -99,7 +99,7 @@ fonts:
 
 logo:
   logo_text: "Pacific"
-  logo_image: assets/images/logo/pacific.png
+  logo_image: assets/images/logo/logo.svg
   logo_image_mobile: assets/images/logo/logo-mobile.svg
   logo_image_invert: assets/images/logo/logo-invert.svg
   logo_image_invert_mobile: assets/images/logo/logo-invert-mobile.svg
@@ -123,8 +123,8 @@ open_graph:
 
 darkmode:
   enable_dark_mode: true
-  show_dark_mode_toggle_in_header: false
-  show_dark_mode_toggle_in_bottom: true # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
+  show_dark_mode_toggle_in_header: true
+  show_dark_mode_toggle_in_bottom: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
   show_dark_mode_toggle_in_mobile_menu: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
 
 cookie_banner:

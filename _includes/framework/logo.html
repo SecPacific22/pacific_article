@@ -7,6 +7,11 @@
         </a>
       </div>
     {% endif %}
+  
+    {% if site.logo.show_logo_text_on_desktop %}
+      <div class="logo-text"><a href="{{ site.baseurl }}/">{{ site.logo.logo_text }}</a></div>
+    {% endif %}
+    
   </div>
 
   <div class="logo logo-desktop-invert">

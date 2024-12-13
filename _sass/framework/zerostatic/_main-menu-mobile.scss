@@ -102,8 +102,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  &.open {
+  @include media-breakpoint-up(md) {
     display: none;
+  }
+  &.open {
     position: absolute;
     z-index: 110;
   }

@@ -33,6 +33,7 @@
         color: inherit;
         &:hover {
           text-decoration: underline;
+          background: none;
         }
         @include media-breakpoint-up(lg) {
           padding: 6px 10px 6px 10px;
@@ -45,6 +46,10 @@
     li.active {
       a {
         font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+          background: none;
+        }
       }
     }
   }
