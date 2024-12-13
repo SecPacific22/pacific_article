@@ -89,13 +89,12 @@ colors:
   menu_text_dark: "#F4F4F5"
 
 fonts:
-  use_google_fonts: false # will use external google_fonts url below
-  google_fonts_url: "https://fonts.googleapis.com/css2?&family=Schibsted+Grotesk:wght@400;500&family=Open+Sans:wght@300;400;500;600;700&family=Fira+Mono&display=swap"
-  use_self_hosted_fonts: true # font files must be placed in /assets/fonts folder and the @font-face definitions must be added to /assets/css/fonts.css
-  heading: "Schibsted Grotesk"
-  base: "Open Sans"
-  monospace: "Fira Mono"
-  logo: "Schibsted Grotesk"
+  use_google_fonts: false
+  use_self_hosted_fonts: true
+  heading: "GT Alpina"
+  base: "GT Alpina"
+  monospace: "RM Mono"
+  logo: "GT Alpina"
 
 logo:
   logo_text: "Pacific"
