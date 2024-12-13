@@ -1,21 +1,49 @@
 .header {
   font-family: var(--font-family-header);
-  font-size: var(--header-font-size);
+  font-size: calc(var(--header-font-size) * 1.2); 
   background-color: var(--color-base-bg);
   color: var(--color-header-text);
+  max-width: 3000px;
+
   .container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    height: var(--header-height);
-    .logos {
-      margin-right: auto;
-    }
+    height: calc(var(--header-height) + 20px);
+    max-width: 1355px;
+    width: 90%;
+    position: relative;
   }
+
+  .logos {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-wrapper {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 40px; 
+  }
+
+  
   a {
+    font-size: 1.1rem;
     color: var(--color-header-text);
   }
 }
+
+.header .menu-main {
+  position: absolute;
+  top: 40%;
+}
+
 .header-transparent {
   position: absolute;
   width: 100%;
@@ -24,9 +52,11 @@
   background-color: transparent !important;
   box-shadow: none !important;
   color: white;
+
   a {
     color: white;
   }
+
   .logos {
     .logo-desktop {
       display: none;
@@ -53,21 +83,63 @@
       }
     }
   }
+
   .hamburger {
     color: white;
   }
 }
+
 .header-scrolled {
   transition: all 200ms linear;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   color: var(--color-header-text);
+
   a {
     color: var(--color-header-text);
   }
 }
+
 .header-fixed {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .header .container {
+    max-width: 1000px;
+    width: 90%;
+  }
+
+  .menu-wrapper {
+    margin-right: 30px; 
+    margin-top: 15px; 
+  }
+
+  a {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: row;
+    max-width: 100%; 
+  }
+
+  .logos {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu-wrapper {
+    margin-right: 15px; 
+    margin-top: 10px; 
+  }
+
+  a {
+    font-size: 0.9rem; 
+  }
 }

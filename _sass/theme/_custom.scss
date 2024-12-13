@@ -51,29 +51,6 @@
       &:last-of-type {
         margin: 0;
       }
-      > a {
-        height: inherit;
-        font-weight: 400;
-        text-transform: capitalize;
-        display: block;
-        padding: 10px 10px 10px 10px;
-        text-decoration: none;
-        color: inherit;
-        border-radius: 6px;
-        &:hover {
-          text-decoration: none;
-          background-color: var(--color-base-bg-2);
-          i {
-            color: var(--color-primary-bg);
-          }
-        }
-        @include media-breakpoint-up(lg) {
-          padding: 10px 13px 10px 13px;
-        }
-        i {
-          font-size: 14px;
-        }
-      }
     }
     li.active {
       > a {

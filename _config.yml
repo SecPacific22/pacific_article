@@ -63,11 +63,11 @@ category_dir: "category"
 
 colors:
   #light-mode colors
-  primary_bg: "#EC255A"
+  primary_bg: "#F5F0E1"
   primary_bg_2: "#eed2d9"
   primary_bg_3: "#eed2d9"
-  primary_text: "#f9fafb"
-  base_bg: "#ffffff"
+  primary_text: "#000000"
+  base_bg: "#F5F0E1"
   base_bg_2: "#ebeef0"
   base_bg_3: "#d6dbe0"
   base_text: "#191a1a"
@@ -97,13 +97,13 @@ fonts:
   logo: "GT Alpina"
 
 logo:
-  logo_text: "Jekyll Origin"
+  logo_text: "Pacific"
   logo_image: assets/images/logo/logo.svg
   logo_image_mobile: assets/images/logo/logo-mobile.svg
   logo_image_invert: assets/images/logo/logo-invert.svg
   logo_image_invert_mobile: assets/images/logo/logo-invert-mobile.svg
-  logo_image_desktop_height: "30px"
-  logo_image_desktop_width: "30px"
+  logo_image_desktop_height: "150px"
+  logo_image_desktop_width: "380px"
   logo_image_mobile_height: "28px"
   logo_image_mobile_width: "28px"
   show_logo_image_on_mobile: true
@@ -122,8 +122,8 @@ open_graph:
 
 darkmode:
   enable_dark_mode: true
-  show_dark_mode_toggle_in_header: false
-  show_dark_mode_toggle_in_bottom: true # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
+  show_dark_mode_toggle_in_header: true
+  show_dark_mode_toggle_in_bottom: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
   show_dark_mode_toggle_in_mobile_menu: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
 
 cookie_banner:
