@@ -51,7 +51,7 @@
   letter-spacing: 0;
   height: inherit;
   
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up("custom-lg-01") {
     display: block;
   } 
   
