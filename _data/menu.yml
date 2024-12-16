@@ -3,10 +3,10 @@ main:
     url: /
     weight: 1
   - name: Article
-    url: /blog-2/
+    url: /articles/
     weight: 2
   - name: News
-    url: /blog-3/
+    url: /news/
     weight: 3
   - name: Pacific
     url: https://site.pacificsec.com/
