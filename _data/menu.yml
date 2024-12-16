@@ -3,14 +3,14 @@ main:
     url: /
     weight: 1
   - name: Article
-    url: /contact/
+    url: /blog-2/
     weight: 2
-  - name: Pacific
-    url: /about/
+  - name: News
+    url: /blog-3/
     weight: 3
-  -  #name: News
-    # url: /contact/
-    #weight: 4
+  - name: Pacific
+    url: https://site.pacificsec.com/
+    weight: 4
 footer_primary:
   - name: Blog
     url: /posts/
