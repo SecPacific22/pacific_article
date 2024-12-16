@@ -7,7 +7,6 @@
   --font-family-monospace: 'RM Mono', monospace;
   --font-family-logo: 'GT Alpina', sans-serif;
 
-
   --color-primary-bg: {{ site.colors.primary_bg | default: "#2b3af7" }};
   --color-primary-bg-2: {{ site.colors.primary_bg_2 | default: "#424ff8" }};
   --color-primary-bg-3: {{ site.colors.primary_bg_3 | default: "#702bf7" }};
@@ -17,7 +16,11 @@
   --color-base-bg-3: {{ site.colors.base_bg_3 | default: "#f1f5f9" }};
   --color-base-text: {{ site.colors.base_text | default: "#202020" }};
   --color-base-text-2: {{ site.colors.base_text_2 | default: "#4b5563" }};
+  --color-base-text-3: {{ site.colors.base_text_3 | default: "#f9fafb" }};
   --color-header-text:  {{ site.colors.header_text | default: "#111827" }};
+
+  --color-footer-text-base: {{ site.colors.footer_text_base | default: "#F5F0E1" }};
+  --color-footer-subscribe-button-text: {{ site.colors.footer_subscribe_button_text | default: "#234123" }};
   
   --logo-text-font-size: {{ site.logo.logo_text_font_size | default: "28px" }};
   --logo-text-font-weight: {{ site.logo.logo_text_font_weight | default: "500" }};
@@ -43,8 +46,12 @@ html[data-bs-theme='dark'] {
   --color-base-bg-3: {{ site.colors.base_bg_3_dark | default: "#24272d" }};
   --color-base-text: {{ site.colors.base_text_dark | default: "#F4F4F5" }};
   --color-base-text-2: {{ site.colors.base_text_2_dark | default: "#D1D5DB" }};
+  --color-base-text-3: {{ site.colors.base_text_3_dark | default: "#f9fafb" }}; 
   --color-logo-text: {{ site.colors.logo_text_dark | default: "#F4F4F5" }};
   --color-header-text: {{ site.colors.header_text_dark | default: "#F4F4F5" }};
+
+  --color-footer-text-base: {{ site.colors.footer_text_base_dark | default: "#f9fafb" }};
+  --color-footer-subscribe-button-text: {{ site.colors.footer_subscribe_button_text_dark | default: "#1d2026" }};
 }
 
 @import 'style';

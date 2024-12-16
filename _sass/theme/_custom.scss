@@ -3,22 +3,40 @@
     margin-right: 6px;
   }
 }
+
 .title {
+  margin-top: 80px;
   .title-heading {
     h1 {
-      font-weight: 500;
+      text-transform: uppercase;
+      display: grid;
+      font-weight: 700;
+      
       strong {
-        font-weight: 500;
-        text-decoration: underline;
-        text-decoration-thickness: 4px;
-        text-decoration-color: var(--color-primary-bg);
+        display: inline-block;
+        position: relative;
+        
+        font-weight: 700;
+        width: fit-content;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: url("../images/elements/green-line.svg") no-repeat center bottom;
+          background-size: contain;
+        }
       }
     }
   }
+
   .title-description {
     p {
       font-weight: 300;
-      font-size: 26px;
+      font-size: 17px;
       line-height: 1.32;
       letter-spacing: 0px;
     }
@@ -31,35 +49,85 @@
   font-family: var(--font-family-base);
   font-size: 16px;
   letter-spacing: 0;
+  height: inherit;
+  
   @include media-breakpoint-up(md) {
     display: block;
-  }
+  } 
+  
   ul {
-    height: inherit;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     list-style: none;
+    gap: 14px;
     margin: 0;
     padding: 0;
+
     li {
-      height: inherit;
+      position: relative;
       margin: 0;
       padding: 0;
       list-style: none;
-      position: relative;
+      height: inherit;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
       &:last-of-type {
         margin: 0;
       }
-    }
-    li.active {
-      > a {
-        font-weight: inherit;
-        text-decoration: underline;
-        text-decoration-color: var(--color-primary-bg);
-        text-decoration-thickness: 2px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        padding: 0 10px;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 50%;
+        background: var(--color-base-text);
+        transform: translate(-50%) scaleX(0);
+        transition: all .4s cubic-bezier(.645, .045, .355, 1);
+        transition-delay: 0s;
+        transform-origin: left;
+        width: 100%;
+        height: .5rem;
+      }
+
+      &:hover::before {
+        transform: translate(-50%) scaleX(1);
       }
     }
+
+    li.active {
+      &::before {
+        transform: translate(-50%) scaleX(1);
+      }
+
+      > a {
+        font-weight: inherit;
+        text-decoration: none;
+        text-decoration-color: var(--color-primary-bg);
+        text-decoration-thickness: 2px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
     li.menu-item-dropdown {
       position: relative;
       &:hover {
@@ -146,16 +214,49 @@
 
 .grid-footer {
   .grid-view-more-button {
-    padding: 10px 14px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
     font-size: 16px;
-    background: var(--color-primary-bg);
-    border-radius: 40px;
-    text-transform: capitalize;
-    font-weight: normal;
+    background: transparent;
+    border-radius: 0px;
+    text-transform: none;
+    font-weight: 600;
     letter-spacing: 0;
-    color: var(--color-primary-text);
+    color: var(--color-base-text);
     text-decoration: none;
-    transition: all 0.15s ease;
+    transition: color ease-out 0.4s;
+    cursor: pointer;
+    border: 1px solid var(--color-base-text);
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--color-hover-background, #41A5FA);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform ease-in-out 0.4s;
+      z-index: 0;
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+    }
+
+
+    span, i {
+      position: relative;
+      z-index: 1; 
+      color: inherit; 
+    }
   }
 }
 
@@ -384,7 +485,7 @@
     font-size: 12px;
     font-family: var(--font-family-base);
     a {
-      color: var(--color-base-text-2);
+      color: var(--color-base-text-3);
       padding: 4px 8px;
       border-radius: 3px;
       margin-right: 10px;
