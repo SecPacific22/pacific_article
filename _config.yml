@@ -3,7 +3,7 @@
 # --------------------
 baseurl: "/pacific_article"
 url: "https://secpacific22.github.io"
-permalink: pretty
+permalink: /:title/
 markdown: kramdown
 highlighter: rouge
 
