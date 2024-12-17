@@ -1,7 +1,7 @@
 # -------------------
 # Jekyll Config
 # --------------------
-baseurl: ""
+baseurl: "/pacific_article"
 url: "https://secpacific22.github.io"
 permalink: pretty
 markdown: kramdown
