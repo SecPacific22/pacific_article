@@ -1,8 +1,8 @@
 # -------------------
 # Jekyll Config
 # --------------------
-baseurl: ""
-url: "https://jekyll-origin.netlify.app"
+baseurl: "/pacific_article"
+url: "https://secpacific22.github.io"
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
@@ -55,12 +55,11 @@ exclude:
   - LICENSE
   - netlify.toml
 
-
 # -------------------
 # Theme Config
 # --------------------
 title: "Jekyll Origin"
-category_dir: 'category'
+category_dir: "category"
 
 colors:
   #light-mode colors
@@ -113,7 +112,7 @@ logo:
   show_logo_text_on_mobile: false
   show_logo_text_on_desktop: true
 
-header: 
+header:
   fixed: false
 
 open_graph:
@@ -124,7 +123,7 @@ open_graph:
 
 darkmode:
   enable_dark_mode: true
-  show_dark_mode_toggle_in_header: false 
+  show_dark_mode_toggle_in_header: false
   show_dark_mode_toggle_in_bottom: true # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
   show_dark_mode_toggle_in_mobile_menu: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
 
@@ -151,13 +150,13 @@ newsletter:
     form_action_url: "https://zerostatic.us21.list-manage.com/subscribe/post?u=798e19886b83aaab346734382&amp;id=f1c526a772&amp;f_id=0027e3e6f0"
     form_title: "Stay In Touch"
 
-contact_form: 
+contact_form:
   use_netlify_form: true
   use_formspree_form: false
   formspree_endpoint: https://formspree.io/f/moqyklqv
   netlify_form_name: "contact"
 
-menu: 
+menu:
   show_dropdown_items_in_mobile_menu: false
   show_social_media_in_mobile_menu: true
 
