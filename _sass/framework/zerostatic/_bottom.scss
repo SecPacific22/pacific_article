@@ -64,17 +64,17 @@
     }
   }
 
-  .logo {
+  .logo-bottom {
     display: flex;
   }
 
-  .invert-logo {
+  .invert-logo-bottom {
     display: none;
   }
 }
-html[data-bs-theme="dark"] .logo {
+html[data-bs-theme="dark"] .logo-bottom {
   display: none !important;
 }
-html[data-bs-theme="dark"] .invert-logo {
+html[data-bs-theme="dark"] .invert-logo-bottom {
   display: flex !important;
 }
