@@ -1,7 +1,7 @@
 # -------------------
 # Jekyll Config
 # --------------------
-baseurl: "/pacific_article"
+baseurl: ""
 url: "https://article.pacificsec.com"
 permalink: /:title/
 markdown: kramdown
