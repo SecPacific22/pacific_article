@@ -2,7 +2,7 @@
 # Jekyll Config
 # --------------------
 baseurl: "/pacific_article"
-url: "https://secpacific22.github.io"
+url: "https://article.pacificsec.com"
 permalink: /:title/
 markdown: kramdown
 highlighter: rouge
