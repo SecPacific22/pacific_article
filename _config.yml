@@ -108,7 +108,7 @@ logo:
   logo_image_mobile: assets/images/logo/logo-mobile.svg
   logo_image_invert: assets/images/logo/logo-invert.svg
   logo_image_invert_mobile: assets/images/logo/logo-invert-mobile.svg
-  logo_image_desktop_height: "38px"
+  logo_image_desktop_height: "32px"
   logo_image_desktop_width: "fit-content"
   logo_image_mobile_height: "28px"
   logo_image_mobile_width: "fit-content"
