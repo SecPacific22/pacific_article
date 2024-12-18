@@ -5,6 +5,7 @@
   padding-bottom: calc(var(--section-padding) * 0.5);
   font-size: 13px;
   a.feed {
+
     display: inline-block;
     border-radius: var(--button-border-radius);
     &:hover {
@@ -12,8 +13,9 @@
     }
   }
   a {
+    
     display: inline-block;
-    color: inherit;
+    color: var(--color-footer-text-base);
     text-decoration: underline;
     padding: 3px 0;
     @include media-breakpoint-up(md) {
@@ -24,6 +26,7 @@
     }
   }
   .copyright {
+    color: var(--color-footer-text-base);
     padding: 3px 0;
     @include media-breakpoint-up(md) {
       display: inline-block;
@@ -47,7 +50,7 @@
         }
         a {
           display: inline-block;
-          color: inherit;
+          color: var(--color-footer-text-base);
           text-decoration: underline;
           padding: 3px 0;
           @include media-breakpoint-up(md) {
@@ -60,4 +63,18 @@
       }
     }
   }
+
+  .logo {
+    display: flex;
+  }
+
+  .invert-logo {
+    display: none;
+  }
+}
+html[data-bs-theme="dark"] .logo {
+  display: none !important;
+}
+html[data-bs-theme="dark"] .invert-logo {
+  display: flex !important;
 }

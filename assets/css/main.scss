@@ -6,6 +6,7 @@
   --font-family-heading: 'GT Alpina', serif;
   --font-family-monospace: 'RM Mono', monospace;
   --font-family-logo: 'GT Alpina', sans-serif;
+  --font-family-title: 'Pangea';
 
   --color-primary-bg: {{ site.colors.primary_bg | default: "#2b3af7" }};
   --color-primary-bg-2: {{ site.colors.primary_bg_2 | default: "#424ff8" }};
@@ -52,6 +53,6 @@ html[data-bs-theme='dark'] {
 
   --color-footer-text-base: {{ site.colors.footer_text_base_dark | default: "#f9fafb" }};
   --color-footer-subscribe-button-text: {{ site.colors.footer_subscribe_button_text_dark | default: "#1d2026" }};
-}
+};
 
 @import 'style';
