@@ -1,9 +1,8 @@
 # -------------------
 # Jekyll Config
 # --------------------
-baseurl: ""
-url: "https://jekyll-origin.netlify.app"
-permalink: pretty
+url: "https://article.pacificsec.com"
+permalink: /:title/
 markdown: kramdown
 highlighter: rouge
 
