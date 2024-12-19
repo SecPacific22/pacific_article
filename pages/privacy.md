@@ -1,114 +1,49 @@
 ---
 title: "Privacy Policy"
-date: 2021-24-01
+date: 2024-19-12
 layout: basic
 permalink: "/privacy-policy/"
 ---
 
-
-We have done our best to create a simple, transparent privacy policy. **Our aim is to collect and store no data, or as little as possible.** We only use cookies that are essential to run this website.
-
-This site is statically generated and served as HTML. Fundamentally this means there is very little surface area for this site to be hacked or compromised. It does not require a database or backend server to process and render documents. Technically there is still a webserver, but it serves pre-rendered documents generated at build time.
+Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our website.
+By using our Website, you consent to the practices described in this Privacy Policy.
 
 ---
 
-## Services We Use
+# Information We Collect
 
-### Analytics
+Email Address: The only personal information we collect is your email address, which you provide when subscribing to our newsletter.
 
-This site uses Plausible Analytics, a privacy focused GDPR compliant analytics alternative to Google Analytics. By using Plausible Analytics, all the site measurement is carried out absolutely anonymously. Cookies are not set and no personal data is collected. All data is in aggregate only. [Learn More](https://plausible.io/privacy-focused-web-analytics)
+# How We Use Your Information
 
-### Advertising & Marketing 
+We use your email address to send you newsletters and updates about our content.
+Your email address will not be used for any other purpose without your explicit consent.
 
-This site does not include any 3rd party advertising or marketing tracking code.
+# Sharing Your Information
 
-### Fonts
+We do not sell, trade, or share your email address with third parties, except as required by law.
+If we are required to share your information for legal purposes, we will notify you unless prohibited by law.
 
-This website does not use Google fonts from the Google CDN. It uses a self-hosted version of fonts which are free of tracking.
+# Data Retention
 
-### Youtube
+We retain your email address for as long as you remain subscribed to our newsletter.
+You can unsubscribe at any time, after which we will remove your email address from our records.
 
-If and where Youtube videos are embedded in this site, we use the Youtube privacy-enhanced embed mode. [Learn More](https://support.google.com/youtube/answer/171780?hl=en#zippy=%2Cturn-on-privacy-enhanced-mode)
+# Data Security
 
-**Contact Form**
+We implement appropriate technical and organizational measures to protect your email address against unauthorized access, disclosure, or alteration.
+However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.
 
-We may request your personal information via our contact form. Personally identifiable information may include, but is not limited to:
+# Your Rights
 
-- Email address
-- First name and last name
-- Address
-- Phone number
+You have the right to access, correct, or delete your email address from our records at any time.
+To exercise these rights, please contact us at contato@pacificsec.com.
 
-Any data you submit in this form may be shared with 3rd party service providers. These providers include, but are not limited to:
+# Changes to This Privacy Policy
 
-- [Formspree](https://formspree.io/legal/privacy-policy/)
-- [Netlify](https://www.netlify.com/privacy/)
+We reserve the right to update this Privacy Policy at any time. Changes will be effective upon posting on our Website.
+Your continued use of the Website after changes are posted constitutes your acceptance of the updated Privacy Policy.
 
-Our contact page includes an email link where you may email us directly instead of using the contact form.
+# Contact Information
 
-**Newsletter Subscription**
-
-We may request your personal information via our newseltter subscription form. Personally identifiable information may include, but is not limited to:
-
-- Email address
-- First name and last name
-
-Any data you submit in this form may be shared with 3rd party service providers. These providers include, but are not limited to:
-
-- [Mailchimp](https://mailchimp.com/legal/)
-
-**Comments**
-
-When posting comments on this site, your data may be shared with a 3rd party service. These providers include, but are not limited to:
-
-- [Disqus](https://disqus.com/privacy-policy/)
-
-
----
-
-## Information We Collect
-
-We may collect the following types of personal data:
-
-- **Contact Information**: Name, email address, mailing address, phone number.
-- **Log Data**: Information that your browser sends whenever you visit our Site.
-- **Cookies**: Data files placed on your device or computer which often include an anonymous unique identifier.
-
-## How We Use Your Information
-
-We may use the information we collect for various purposes, including:
-
-- **To Provide and Maintain the Site**: We use your personal data to provide you with access to our Site and to monitor and improve its performance.
-- **To Send You Updates and Marketing Communications**: We may send you newsletters or marketing communications about our services.
-- **To Comply With Legal Obligations**: We may use your information to comply with legal obligations, such as to respond to a subpoena or other legal request.
-
-## Data Sharing and Disclosure
-
-We may share your personal data with third parties in the following situations:
-
-- **With Service Providers**: We may share your information with third-party service providers who perform services on our behalf.
-- **For Legal Purposes**: We may share your information when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.
-
-## Your Rights
-
-You have the right to:
-
-- **Access**: Request access to your personal data.
-- **Correction**: Request correction of your personal data.
-- **Deletion**: Request deletion of your personal data.
-- **Data Portability**: Request the transfer of your personal data to another party.
-- **Withdraw Consent**: Withdraw your consent at any time where we rely on your consent to process your personal data.
-
-## Security
-
-We take reasonable measures to help protect your personal data from loss, theft, misuse, and unauthorized access, disclosure, alteration, and destruction.
-
-## Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
-
----
-
-## Contact Us
-
-If you have any questions about this Privacy Policy, You can contact us: [support@example.com](mailto:support@example.com)
+If you have any questions about this Privacy Policy, please contact us at contato@pacificsec.com.

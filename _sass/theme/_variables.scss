@@ -3,8 +3,12 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
+  "custom-lg-01": 900px,
   lg: 992px,
+  "custom-lg-02": 1100px,
+  "custom-lg-03": 1200px,
   xl: 1360px,
+  "custom-xl-01": 1630px,
 );
 
 $container-max-widths: (

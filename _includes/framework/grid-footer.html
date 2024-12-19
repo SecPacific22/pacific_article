@@ -7,7 +7,8 @@
 <div class="col-12">
     <div class="grid-footer grid-footer-align-{{ align }}">
         <a href="{{link | relative_url }}" class="grid-view-more-button">
-            {{ text }} {% if icon and icon != '' %}<i class="fa-solid {{ icon }}"></i>{% endif %}
+            <span>{{ text }} </span>
+            {% if icon and icon != '' %}<i class="fa-solid {{ icon }}"></i>{% endif %}
         </a>
     </div>
 </div>
