@@ -5,6 +5,7 @@
       letter-spacing: -1px;
       line-height: 1.2;
       font-weight: bold;
+      font-family: var(--font-family-base);
       @include media-breakpoint-up(md) {
         font-size: 56px;
       }
@@ -77,6 +78,21 @@
       position: absolute;
       z-index: 0;
       width: 500px;
+    }
+  }
+}
+html[data-bs-theme="dark"] {
+  .yellow-trapeze {
+    display: none;
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  .brown-trapeze {
+    display: block;
+    @include media-breakpoint-up(sm) {
+      display: block;
     }
   }
 }

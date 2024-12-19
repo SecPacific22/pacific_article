@@ -6,12 +6,13 @@ body_classes: page-home
 <div class="section">
   <div class="container">
     <div class="row">
-      {% if page.image and page.image != '' %}
+      {% if page.images and page.images.size > 0 %}
       <div class="col-12">
         {% include framework/title.html
           title=page.title
+          sub_title=page.sub_title
           description=page.description
-          image=page.image
+          images=page.images
           show_social=page.show_social_media_in_title
         %}
       </div>
@@ -19,6 +20,7 @@ body_classes: page-home
       <div class="col-10">
         {% include framework/title.html
           title=page.title
+          sub_title=page.sub_title
           description=page.description
           show_social=page.show_social_media_in_title
         %}
@@ -77,7 +79,7 @@ body_classes: page-home
         view_more_button_text=page.posts.view_more_button_text
         view_more_button_link=page.posts.view_more_button_link
         align="center"
-        icon=""
+        icon=page.posts.view_more_button_icon
       %}
 
     </div>
