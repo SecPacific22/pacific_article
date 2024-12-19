@@ -1,7 +1,7 @@
 ---
 layout: home
 permalink: "/"
-title: "Cybersecutiry"
+title: "Cybersecurity"
 sub_title:
   part_1: "as an"
   part_2: "art"
