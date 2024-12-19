@@ -2,7 +2,7 @@ main:
   - name: Home
     url: /
     weight: 1
-  - name: Articles
+  - name: Article
     url: /articles/
     weight: 2
   # - name: News
