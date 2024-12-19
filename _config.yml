@@ -65,7 +65,7 @@ colors:
   #light-mode colors
   primary_bg: "#F5F0E1"
   primary_bg_2: "#eed2d9"
-  primary_bg_3: "#eed2d9"
+  primary_bg_3: "#D1D5DB59"
   primary_text: "#191a1a"
   base_bg: "#F5F0E1"
   base_bg_2: "#234123"
@@ -81,7 +81,7 @@ colors:
   # dark-mode colors
   primary_bg_dark: "#121418"
   primary_bg_2_dark: "#eed2d9"
-  primary_bg_3_dark: "#eed2d9"
+  primary_bg_3_dark: "#24272D"
   primary_text_dark: "#f9fafb"
   base_bg_dark: "#121418"
   base_bg_2_dark: "#1d2026"

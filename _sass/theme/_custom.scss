@@ -508,12 +508,13 @@ html[data-bs-theme="dark"] .blue-highlight {
 }
 
 .page-post {
+  margin-top: 80px;
   .post-categories {
     display: inline-flex;
     font-size: 12px;
     font-family: var(--font-family-base);
     a {
-      color: var(--color-base-text);
+      color: var(--color-base-text-3);
       padding: 4px 8px;
       border-radius: 3px;
       margin-right: 10px;
@@ -525,6 +526,7 @@ html[data-bs-theme="dark"] .blue-highlight {
     }
   }
 }
+
 .page-post-1 {
   .post-header {
     .post-date {
@@ -566,6 +568,7 @@ html[data-bs-theme="dark"] .blue-highlight {
     }
   }
 }
+
 .page-post-2 {
   .post-header {
     .post-image {
@@ -602,6 +605,7 @@ html[data-bs-theme="dark"] .blue-highlight {
     }
   }
 }
+
 .page-post-3 {
   .post-header {
     .post-image {
@@ -788,6 +792,7 @@ html[data-bs-theme="dark"] .blue-highlight {
   html[data-bs-theme="dark"] & {
   }
 }
+
 .card-post.card-row {
   border-radius: 0;
   box-shadow: none;
@@ -814,6 +819,7 @@ html[data-bs-theme="dark"] .blue-highlight {
     }
   }
 }
+
 .card-post.card-list {
   border-radius: 0;
   box-shadow: none;
@@ -861,6 +867,7 @@ html[data-bs-theme="dark"] .blue-highlight {
     display: none;
   }
 }
+
 .card-post.card-full {
   .card-thumbnail {
     @include media-breakpoint-up(md) {
