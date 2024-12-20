@@ -57,7 +57,7 @@ exclude:
 # -------------------
 # Theme Config
 # --------------------
-title: "Jekyll Origin"
+title: "Pacific Article"
 category_dir: "category"
 
 colors:
@@ -120,7 +120,7 @@ header:
   fixed: true
 
 open_graph:
-  meta_og_type: "website"
+  meta_opengraph_type: "website"
   meta_twitter_card: "summary"
   meta_twitter_site: "@pacific_sec"
   meta_twitter_creator: "@pacific_sec"
@@ -166,8 +166,8 @@ menu:
 
 footer:
   enable_footer: false # show/hide the entire footer
-  footer_title: "Jekyll Origin"
-  footer_description: "Origin is a creative portfolio for Jekyll by Zerostatic Themes."
+  footer_title: "Pacific Article"
+  footer_description: "At Pacific Articles, our team of specialists shares deep insights, professional expertise, and original research in the inherently interdisciplinary field of cybersecurity."
   enable_social_media_icons: false
   enable_menu_footer_primary: false
   enable_menu_footer_secondary: false

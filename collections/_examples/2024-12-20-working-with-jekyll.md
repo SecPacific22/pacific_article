@@ -1,12 +1,27 @@
 ---
+# Define o layout do artigo, sempre usar esse layout.
 layout: post
-title: "Writing With Markdown"
-date: 2019-02-03T13:06:00Z
-authors: ["Sage Kirk"]
-categories: ["Development", "Javascript"]
-description: Learn how to use Markdown to write blog posts. Understand front-matter and how it is used in templates.
-thumbnail: "/assets/images/gen/blog/blog-4-thumbnail.webp"
-image: "/assets/images/gen/blog/blog-4.webp"
+
+# Define o título do artigo.
+title: "Working With Jekyll"
+
+# Define a data do artigo, sempre usar esse padrão de data.
+date: 2024-07-23
+
+# Define o autor do artigo, depende do arquivo authors.yml
+authors: ["gregory_alvim"]
+
+# Define as categorias do artigo.
+categories: ["Web", "Framework"]
+
+# Define a descrição do artigo.
+description: "Branding is an intrinsic part of your companies success, learn why your brand matters. A brand is a name, term, design, symbol or any other feature that distinguishes one seller's good or service from those of other sellers."
+
+# Define a thumbnail do artigo.
+thumbnail: "/assets/images/gen/blog/blog-15-thumbnail.webp"
+
+# Define a thumbnail dentro do artigo.
+image: "/assets/images/gen/blog/blog-15.webp"
 ---
 
 Markdown is a lightweight markup language with plain-text-formatting syntax. Its design allows it to be converted to many output formats, but the original tool by the same name only supports HTML. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
