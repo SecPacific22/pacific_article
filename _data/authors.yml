@@ -1,36 +1,11 @@
-sage_kirk:
-  title: "Sage Kirk"
-  name: "Sage Kirk"
-  job: "Co-founder & CEO"
-  image: "assets/images/team/sage-kirk.jpg"
+gregory_alvim:
+  title: "Grégory Alvim"
+  name: "Grégory Alvim"
+  job: "Software Developer"
+  profile: "https://lh3.googleusercontent.com/a/ACg8ocK3yocGxgW1b0oQ6vvG2ap0Dy29dBaiVGd7QIaP6PDAC-QUiZM=s288-c-no"
   bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in."
-mike_vance:
-  title: "Mike Vance"
-  name: "Mike Vance"
-  job: "Software Engineer"
-  image: "assets/images/team/mike-vance.jpg"
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in."
-marc_paulo:
-  title: "Mark Paulo"
-  name: "Mark Paulo"
-  job: "Software Engineer"
-  image: "assets/images/team/marc-paulo.jpg"
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in."
-jodi_harmon:
-  title: "Jodi Harmon"
-  name: "Jodi Harmon"
-  job: "Marketing Manager"
-  image: "assets/images/team/jodi-harmon.jpg"
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in."
-alec_mendez:
-  title: "Alec Mendez"
-  name: "Alec Mendez"
-  job: "Graphic Designer"
-  image: "assets/images/team/alec-mendez.png"
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in."
-shyam_wolf:
-  title: "Shyam Wolf"
-  name: "Shyam Wolf"
-  job: "Product Manager"
-  image: "assets/images/team/shyam-wolf.png"
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in."
+  social:
+    linkedin_url: https://www.linkedin.com/in/gregoryalvim
+    github_url: https://github.com/gregoryPacific
+    twitter_url: https://github.com/gregoryPacific
+    instagram_url: https://www.instagram.com/gregori_alvim

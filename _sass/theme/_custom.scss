@@ -539,6 +539,8 @@ html[data-bs-theme="dark"] .blue-highlight {
     .post-authors {
       display: flex;
       flex-direction: row;
+      gap: 16px;
+      
       .author {
         margin-right: 16px;
       }
