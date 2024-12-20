@@ -1,3 +1,15 @@
+artur_marzano:
+  title: "Artur Marzano"
+  name: "Artur Marzano"
+  job: "Cybersecurity Analyst"
+  profile: "https://media.licdn.com/dms/image/v2/C5603AQElr3U38WyNJg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1575938506361?e=1740009600&v=beta&t=wliMNsMIbpxUVrzXWyeomVHnGZqAXTqb5u_76jzpHcw"
+  bio: "Seasoned Cybersecurity professional & computer scientist with a wide range of experiences in defensive and offensive operations. At PacificSec I execute and coordinate pentests and cyberwargames going from tooling development, reconnaissance & exploitation to business impact demonstration."
+  social:
+    linkedin_url: https://www.linkedin.com/in/artur-marzano
+    github_url: https://github.com/Macmod
+    twitter_url: https://twitter.com/MacmodSec
+    instagram_url:
+
 gregory_alvim:
   title: "Grégory Alvim"
   name: "Grégory Alvim"
