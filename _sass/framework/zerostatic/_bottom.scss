@@ -70,11 +70,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 24px;
     gap: 4px;
 
     @include media-breakpoint-down(md) {
       display: grid;
-      margin-top: 24px;
       justify-content: start;
     }
   }
