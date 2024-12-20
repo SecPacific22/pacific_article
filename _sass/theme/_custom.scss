@@ -521,7 +521,7 @@ html[data-bs-theme="dark"] .blue-highlight {
       background-color: var(--color-base-bg-2);
       &:hover {
         text-decoration: none;
-        background-color: var(--color-base-bg-3);
+        opacity: 0.7;
       }
     }
   }
@@ -539,6 +539,8 @@ html[data-bs-theme="dark"] .blue-highlight {
     .post-authors {
       display: flex;
       flex-direction: row;
+      gap: 16px;
+      
       .author {
         margin-right: 16px;
       }
