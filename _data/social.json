@@ -12,6 +12,6 @@
   {
     "title": "RSS",
     "fa_icon": "fas fa-feed",
-    "url": "https://jekyll-origin.netlify.app/feed.xml"
+    "url": "/feed.xml"
   }
 ]
