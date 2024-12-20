@@ -23,7 +23,7 @@ images:
 show_social_media_in_title: true
 meta_title: Pacific Article
 meta_description: "Explore cybersecurity with Pacific Articles: insights, expertise, and innovation to tackle untraceable attacks and groundbreaking defenses."
-meta_image: "/assets/images/meta-logo-preview.png"
+meta_image: "/assets/images/meta_logo_preview.png"
 
 posts:
   heading: ""
