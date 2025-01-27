@@ -1,3 +1,15 @@
+cezar_queiroz:
+  title: "Cezar Queiroz"
+  name: "Cezar Queiroz"
+  job: "RedTeam Leader"
+  profile: "https://lh3.googleusercontent.com/chat_attachment/AP1Ws4u8pLM41F74d-i9PWh0oLp6NMwHgYrt3EdZYmAGQd-gGciFGsjv9Top9yVM8kY17HIqQu0Fw9Yg7DdyaJps_YfecUDugb8NWNwCYSGFfYSCC0u8Pf8VDq4a7qlE_Frrrd4pysf5z7o7kz2H_2BLngk58iz8O-1DetACNGbbMOE-7jzYBN4Yu8xOu-GEszYdH4BgAGQFjJIag1daRqL7m3owSE2vRsjY8K-JcVrVEene1YPa3hcp_9ERxMOUvmwVi6_Y9cKPswbeOfq4pJkFilKlfWhl5icOaER0h_hC-F0rkiYnCLXbfpz80yh01Vipbvg=w512"
+  bio: "I break things to make them more secure."
+  social:
+    linkedin_url: https://www.linkedin.com/in/cezarjunio/
+    github_url: https://github.com/Th3kir4
+    twitter_url: https://x.com/cezar_kirajunio
+    instagram_url:
+
 artur_marzano:
   title: "Artur Marzano"
   name: "Artur Marzano"
@@ -9,15 +21,3 @@ artur_marzano:
     github_url: https://github.com/Macmod
     twitter_url: https://twitter.com/MacmodSec
     instagram_url:
-
-gregory_alvim:
-  title: "Grégory Alvim"
-  name: "Grégory Alvim"
-  job: "Software Developer"
-  profile: "https://lh3.googleusercontent.com/a/ACg8ocK3yocGxgW1b0oQ6vvG2ap0Dy29dBaiVGd7QIaP6PDAC-QUiZM=s288-c-no"
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in."
-  social:
-    linkedin_url: https://www.linkedin.com/in/gregoryalvim
-    github_url: https://github.com/gregoryPacific
-    twitter_url: https://github.com/gregoryPacific
-    instagram_url: https://www.instagram.com/gregori_alvim
