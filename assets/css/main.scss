@@ -19,6 +19,7 @@
   --color-base-text-2: {{ site.colors.base_text_2 | default: "#4b5563" }};
   --color-base-text-3: {{ site.colors.base_text_3 | default: "#f9fafb" }};
   --color-header-text:  {{ site.colors.header_text | default: "#111827" }};
+  --color-base-text-link:  {{ site.colors.base_text_link | default: "#F6660C" }};
 
   --color-footer-text-base: {{ site.colors.footer_text_base | default: "#F5F0E1" }};
   --color-footer-subscribe-button-text: {{ site.colors.footer_subscribe_button_text | default: "#234123" }};
@@ -50,6 +51,7 @@ html[data-bs-theme='dark'] {
   --color-base-text-3: {{ site.colors.base_text_3_dark | default: "#f9fafb" }}; 
   --color-logo-text: {{ site.colors.logo_text_dark | default: "#F4F4F5" }};
   --color-header-text: {{ site.colors.header_text_dark | default: "#F4F4F5" }};
+  --color-base-text-link:  {{ site.colors.base_text_link_dark | default: "#f9fafb" }};
 
   --color-footer-text-base: {{ site.colors.footer_text_base_dark | default: "#f9fafb" }};
   --color-footer-subscribe-button-text: {{ site.colors.footer_subscribe_button_text_dark | default: "#1d2026" }};
