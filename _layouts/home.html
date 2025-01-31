@@ -6,26 +6,16 @@ body_classes: page-home
 <div class="section">
   <div class="container">
     <div class="row">
-      {% if page.images and page.images.size > 0 %}
       <div class="col-12">
         {% include framework/title.html
           title=page.title
           sub_title=page.sub_title
           description=page.description
           images=page.images
+          authors=site.data.authors
           show_social=page.show_social_media_in_title
         %}
       </div>
-      {% else %}
-      <div class="col-10">
-        {% include framework/title.html
-          title=page.title
-          sub_title=page.sub_title
-          description=page.description
-          show_social=page.show_social_media_in_title
-        %}
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>

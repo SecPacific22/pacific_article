@@ -1,17 +1,10 @@
 ---
 layout: home
 permalink: "/"
-title: "Cybersecurity"
-sub_title:
-  part_1: "as an"
-  part_2: "art"
-  part_3: "form."
+title: "Cybersecurity, Innovation & Discovery"
+sub_title: "Exploring the art and science of digital security."
 
-description:
-  paragraph_1: "At Pacific Articles, our team of specialists shares deep insights, professional expertise, and original research in the inherently interdisciplinary field of cybersecurity. Our mission is to tackle challenges with fresh, innovative perspectives."
-  paragraph_2: "In our daily work, when we encounter astonishing phenomena like seemingly untraceable attacks or ingenious malware exploits, we can’t help but ask:"
-  paragraph_3: "HOW? How are these threats engineered? What mechanisms drive them? What groundbreaking defenses or innovations can emerge from understanding these principles?"
-  paragraph_4: "These are the questions that ignite our curiosity and drive our relentless pursuit of knowledge."
+description: "Join us on a journey where every insight offers a fresh perspective on the world of cybersecurity. Here, curiosity drives us to learn, explore, and question. At Pacific Articles, our team of specialists shares deep analysis, professional expertise, and original research in a field that blends technology, creativity, and strategy."
 
 images:
   head_exploding: "/assets/images/head_exploding.png"
