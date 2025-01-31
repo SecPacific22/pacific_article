@@ -76,6 +76,7 @@ colors:
   menu_text: "#191a1a"
   footer_text_base: "#F5F0E1"
   footer_subscribe_button_text: "#234123"
+  base_text_link: "#F6660C"
 
   # dark-mode colors
   primary_bg_dark: "#121418"
@@ -92,6 +93,7 @@ colors:
   menu_text_dark: "#F4F4F5"
   footer_text_base_dark: "#f9fafb"
   footer_subscribe_button_text_dark: "#1d2026"
+  base_text_link_dark: "#f9fafb"
 
 fonts:
   use_google_fonts: false

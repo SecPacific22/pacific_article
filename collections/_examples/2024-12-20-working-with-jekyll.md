@@ -8,10 +8,10 @@ title: "Working With Jekyll"
 # Define a data do artigo, sempre usar esse padrão de data.
 date: 2024-07-23
 
-# Define o autor do artigo, depende do arquivo authors.yml
-authors: ["gregory_alvim"]
+# Define o autor do artigo, depende do arquivo authors.yml.
+authors: ["cezar_queiroz"]
 
-# Define as categorias do artigo.
+# Define as categorias do artigo, depende da pasta categories, usar só categorias já cadastradas nessa pasta.
 categories: ["Web", "Framework"]
 
 # Define a descrição do artigo.
