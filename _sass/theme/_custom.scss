@@ -6,7 +6,7 @@
 
 .title {
   margin-top: 80px;
-
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -744,14 +744,19 @@ html[data-bs-theme="dark"] .blue-highlight {
     line-height: 1.3;
   }
   .card-categories {
-    display: inline-flex;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     font-size: 12px;
     font-family: var(--font-family-base);
+
     a {
+      width: 100%;
       color: var(--color-base-text-3);
       padding: 4px 8px;
       border-radius: 3px;
-      margin-right: 10px;
+      margin-right: 0px;
       background-color: var(--color-base-bg-2);
     }
   }

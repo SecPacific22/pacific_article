@@ -2,172 +2,171 @@
   font-size: 19px;
   font-family: var(--font-family-base);
   color: var(--color-base-text-2);
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: var(--color-base-text);
-    font-family: var(--font-family-heading);
-  }
+/* Títulos */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
+  color: var(--color-base-text);
+  font-family: var(--font-family-heading);
+}
 
-  h1 {
-    margin-top: 60px;
-    margin-bottom: 15px;
-    font-size: 36px;
-    font-weight: 400;
-  }
+.content h1 {
+  margin: 60px 0 15px;
+  font-size: 36px;
+  font-weight: 400;
+}
 
-  h2 {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 28px;
-    font-weight: 500;
-  }
+.content h2 {
+  margin: 40px 0 15px;
+  font-size: 28px;
+  font-weight: 500;
+}
 
-  h3 {
-    font-family: var(--font-family-base);
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 22px;
-    font-weight: 600;
-  }
+.content h3 {
+  font-family: var(--font-family-base);
+  margin: 30px 0 15px;
+  font-size: 22px;
+  font-weight: 600;
+}
 
-  h4 {
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    font-weight: 700;
-  }
+.content h4 {
+  margin: 20px 0 15px;
+  font-size: 16px;
+  font-weight: 700;
+}
 
-  > h1,
-  h2,
-  h3,
-  h4 {
-    &:first-child {
-      margin-top: 0;
-    }
-  }
+/* Remove margem superior do primeiro título dentro de .content */
+.content > h1:first-child,
+.content > h2:first-child,
+.content > h3:first-child,
+.content > h4:first-child {
+  margin-top: 0;
+}
 
-  p {
-    line-height: 1.56;
-    margin-bottom: 20px;
-    font-family: var(--font-family-base);
-    color: var(--color-base-text-2);
-  }
+/* Parágrafos */
+.content p {
+  line-height: 1.56;
+  margin-bottom: 20px;
+}
 
-  ul {
-    margin: 20px;
-    list-style: disc;
-  }
+/* Listas */
+.content ul,
+.content ol {
+  margin: 20px;
+}
 
-  ol {
-    margin: 20px;
-    list-style: decimal;
-  }
+.content ul {
+  list-style: disc;
+}
 
-  li {
-    margin-left: 20px;
-    line-height: 1.5;
-  }
+.content ol {
+  list-style: decimal;
+}
 
-  a {
-    color: var(--color-base-text-link);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--color-base-text-link);
+.content li {
+  margin-left: 20px;
+  line-height: 1.5;
+}
 
-    &:hover {
-      opacity: 0.8;
-      color: var(--color-base-text-link);
-    }
-  }
+/* Links */
+.content a {
+  color: var(--color-base-text-link);
+  text-decoration: underline 2px var(--color-base-text-link);
+}
 
-  img {
-    margin: 0 0 0 0;
-    max-width: 100%;
-    height: auto;
-    @include media-breakpoint-up(md) {
-      margin: 0 0 0 0;
-    }
-  }
+.content a:hover {
+  opacity: 0.8;
+}
 
-  img + img {
-    margin-top: 0;
-  }
+/* Imagens */
+.content img {
+  margin: 16px 0;
+  max-width: 100%;
+  height: auto;
+}
 
-  figure {
-    margin: 40px 0 40px 0;
-    figcaption {
-      margin-top: 10px;
-      font-size: 14px;
-      h4 {
-        font-size: 14px;
-        margin: 0;
-        font-weight: normal;
-        font-family: var(--font-family-base);
-      }
-      p {
-        font-size: 14px;
-        margin: 0;
-        font-weight: bold;
-        font-family: var(--font-family-base);
-      }
-    }
-    a {
-      display: block;
-    }
-    img {
-      margin: 0;
-    }
-  }
+/* Remove margem superior para imagens consecutivas */
+.content img + img {
+  margin-top: 0;
+}
 
-  code,
-  pre {
-    font-family: var(--font-family-monospace);
-  }
+/* Figures */
+.content figure {
+  margin: 40px 0;
+}
 
-  .highlight {
-    pre {
-      background-color: var(--color-primary-bg-3);
-      border-radius: var(--card-border-radius);
-      font-size: 15px;
-      line-height: 20px;
-      padding: 26px;
-      overflow: auto;
-      font-family: var(--font-family-monospace);
-    }
-  }
+.content figure img {
+  margin: 0;
+}
 
-  blockquote {
-    margin: 40px 0 40px 0;
-    border-left: 4px solid var(--color-base-text);
-    padding: 30px 20px;
-    &::before {
-      content: "";
-    }
-    &::after {
-      content: "";
-    }
-    p {
-      color: var(--color-base-text);
-      font-family: var(--font-family-base);
-      letter-spacing: 1px;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 1.6;
-      margin: 0;
-    }
-  }
+.content figure a {
+  display: block;
+}
 
-  table {
-    border-spacing: 1;
-    border-collapse: collapse;
-    border-radius: var(--card-border-radius);
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-  }
+/* Figcaption */
+.content figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.content figcaption h4 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.content figcaption p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Código */
+.content code,
+.content pre {
+  font-family: var(--font-family-monospace);
+}
+
+/* Blocos de código destacados */
+.content .highlight pre {
+  background-color: var(--color-primary-bg-3);
+  border-radius: var(--card-border-radius);
+  font-size: 15px;
+  line-height: 20px;
+  padding: 26px;
+  overflow: auto;
+}
+
+/* Bloco de citação */
+.content blockquote {
+  margin: 40px 0;
+  border-left: 4px solid var(--color-base-text);
+  padding: 30px 20px;
+}
+
+.content blockquote::before,
+.content blockquote::after {
+  content: "";
+}
+
+.content blockquote p {
+  color: var(--color-base-text);
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tabelas */
+.content table {
+  width: 100%;
+  margin: 0 auto;
+  border-spacing: 1px;
+  border-collapse: collapse;
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  position: relative;
 }
