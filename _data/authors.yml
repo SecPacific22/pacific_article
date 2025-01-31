@@ -21,3 +21,39 @@ artur_marzano:
     github_url: https://github.com/Macmod
     twitter_url: https://twitter.com/MacmodSec
     instagram_url:
+
+joao_paulo:
+  title: "João Paulo"
+  name: "João Paulo"
+  job: "RedTeam Analyst"
+  profile: "https://lh3.googleusercontent.com/a-/ALV-UjXtwhLorRsES1uuEngBu6N_jVXYBFWR6qVNjCmzQmWOS_GTw77B=s80-p-k-rw-no"
+  bio: ""
+  social:
+    linkedin_url:
+    github_url:
+    twitter_url:
+    instagram_url:
+
+murilo_lopes:
+  title: "Murilo Lopes"
+  name: "Murilo Lopes"
+  job: "RedTeam Analyst"
+  profile: "https://lh3.googleusercontent.com/a-/ALV-UjUdjGMOd3by70IBbruTVaEeT2j02_RGKxicepSEskmspJJte_Q=s80-p-k-rw-no"
+  bio: "Former lawyer. Data protection and Privacy advocate. Working as a Red Team analyst at Pacific."
+  social:
+    linkedin_url: https://www.linkedin.com/in/murilo-lopes/
+    github_url: https://github.com/freakzrd
+    twitter_url:
+    instagram_url: https://www.instagram.com/onemurilo/
+
+thais_hudari_abib:
+  title: "Thaís Hudari Abib"
+  name: "Thaís Hudari Abib"
+  job: "Cybersecurity Analyst | Red team | Offensive Security"
+  profile: "https://lh3.googleusercontent.com/a-/ALV-UjUUnhBMmbTO4bT3aR4MI9b-oEC5vnpywuq5XaBKkF-vQj-WF24=s80-p-k-rw-no"
+  bio: ""
+  social:
+    linkedin_url: https://www.linkedin.com/in/thudari/
+    github_url:
+    twitter_url:
+    instagram_url:

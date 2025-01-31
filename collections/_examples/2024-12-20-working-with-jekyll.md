@@ -18,10 +18,10 @@ categories: ["Web", "Framework"]
 description: "Branding is an intrinsic part of your companies success, learn why your brand matters. A brand is a name, term, design, symbol or any other feature that distinguishes one seller's good or service from those of other sellers."
 
 # Define a thumbnail do artigo.
-thumbnail: "/assets/images/gen/blog/blog-15-thumbnail.webp"
+thumbnail: "https://i.pinimg.com/736x/88/98/65/889865e2df8b49c05875c62cf9c5670f.jpg"
 
 # Define a thumbnail dentro do artigo.
-image: "/assets/images/gen/blog/blog-15.webp"
+image: "https://i.pinimg.com/736x/88/98/65/889865e2df8b49c05875c62cf9c5670f.jpg"
 ---
 
 Markdown is a lightweight markup language with plain-text-formatting syntax. Its design allows it to be converted to many output formats, but the original tool by the same name only supports HTML. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
