@@ -2,7 +2,7 @@ cezar_queiroz:
   title: "Cezar Queiroz"
   name: "Cezar Queiroz"
   job: "RedTeam Leader"
-  profile: "../assets/images/authors/cezar_queiroz.jpg"
+  profile: "assets/images/authors/cezar_queiroz.jpg"
   bio: "I break things to make them more secure."
   social:
     linkedin_url: https://www.linkedin.com/in/cezarjunio/
