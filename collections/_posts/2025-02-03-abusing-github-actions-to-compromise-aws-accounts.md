@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "Abusing GitHub Actions to Compromise AWS Accounts"
-date: "2025-01-24"
+date: "2025-02-03"
 authors: ["cezar_queiroz"]
 categories: ["Red Team", "AWS Security", "GitHub Actions", "CI/CD Security", "IAM"]
-description: 
+description:
 thumbnail: "/assets/images/gen/blog/capa_article_v5.png"
 image: "/assets/images/gen/blog/capa_article_v5.png"
 comments: false
 
 meta_title: "Abusing GitHub Actions to Compromise AWS Accounts"
-meta_description: 
+meta_description:
 meta_image: "/assets/images/gen/blog/capa_article_v5.png"
 ---
 
@@ -18,9 +18,9 @@ This post will discuss how an attacker can exploit GitHub-to-AWS keyless authent
 
 During Red Team exercises, gaining access to code repositories through phishing techniques is very common. We use tools such as Evilginx, which allows us to carry out Man-in-the-Middle (MitM) attacks, capturing session cookies and credentials that make it possible to bypass two-factor authentication (2FA).
 
->Evilginx is a man-in-the-middle attack framework used for phishing login credentials along with session cookies, which allows bypassing two-factor authentication protection.
+> Evilginx is a man-in-the-middle attack framework used for phishing login credentials along with session cookies, which allows bypassing two-factor authentication protection.
 
-Read more: <https://github.com/kgretzky/evilginx2> 
+Read more: <https://github.com/kgretzky/evilginx2>
 
 The scenarios described in this post are based on real situations observed during Red Team Assessments conducted by Pacific, particularly in companies with cloud-native applications.
 
@@ -57,6 +57,7 @@ Let's assume you want GitHub Actions to perform some operations on your AWS acco
 GitHub Actions has now been added as an identity provider.
 
 ### Step 2: Create a Role to Manage the S3 Bucket
+
 - Now, create a Managed Policy with the necessary permissions to manage the S3 bucket.
   Example Managed Policy:
 
@@ -92,11 +93,13 @@ By running the configured workflow, we can see that everything went as expected:
 This was a simple example of how to configure GitHub Actions to connect to AWS "securely" and without using static credentials. As a result, everyone following along now understands the basic authentication process via OIDC.
 
 ### Common issues when configuring Trust Policy
+
 As we saw in the previous topic, integrating GitHub Actions with AWS is very simple. Likewise, creating a role, attaching sensitive permissions, and configuring a Trust Policy to grant access via an organization, repository, or branch is also a quick process.
 
 However, this simplicity brings with it great responsibility. We often see companies trying to create this integration in the most “secure” way, but in practice, business demands often prioritize functionality over security.
 
 ## For example:
+
 - The engineering team needs urgent permission for a repository or the entire organization.
 - Deadline pressures lead to permissive settings being applied, such as granting access in a Trust Policy without considering the risks involved.
 
@@ -171,7 +174,7 @@ Consider the following case:
 ### Here we present a practical example of exploiting this vulnerability:
 
 A workflow was created inside the malicious-repo repository in the PacificSecurity1 account. This repository takes advantage of the permissive Trust Policy to assume the vulnerable role  
-in AWS - look for code snippets that indicate.
+in AWS.
 
 ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-008.png){:class="custom-image-class"}
 
@@ -188,30 +191,35 @@ One of the first steps for an attacker to exploit the integration between GitHub
 If the attacker has gained access to the company's GitHub, he can explore the repositories to which he has access, looking for evidence of integration with AWS.
 Here are the steps they  
 can take:
-1. Search for Workflow Files in the Repository  
-    **a.** Browse the available repositories  
-    **b.** Analyze the contents of the .github/workflows directory in all branches  
-    - These directories usually contain YAML (.yml) files that define GitHub Actions workflows
 
-    **c.** In the YAML files, look for code snippets that indicate the use of AWS Examples include:  
-    - References to the OIDC identity provider (actions/configure-aws-credentials@v2)
-    - Code assuming specific roles with role-to-assume
-    - Calls to the AWS CLI (aws s3, aws sts, etc.)
-    ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-010.png){:class="custom-image-class"}
-    Example of a YAML file referencing a role and assuming permissions on AWS
+1. Search for Workflow Files in the Repository  
+   **a.** Browse the available repositories  
+   **b.** Analyze the contents of the .github/workflows directory in all branches
+
+   - These directories usually contain YAML (.yml) files that define GitHub Actions workflows
+
+   **c.** In the YAML files, look for code snippets that indicate the use of AWS Examples include:
+
+   - References to the OIDC identity provider (actions/configure-aws-credentials@v2)
+   - Code assuming specific roles with role-to-assume
+   - Calls to the AWS CLI (aws s3, aws sts, etc.)
+     ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-010.png){:class="custom-image-class"}
+     Example of a YAML file referencing a role and assuming permissions on AWS
 
 2. Analyzing the History of Actions  
-If the attacker has access to the company's GitHub repositories, they can explore the history of executed actions to identify signs of integration with AWS. This can be  
-done as follows:  
-    **a.** Examine the History of Workflows Executed:  
+   If the attacker has access to the company's GitHub repositories, they can explore the history of executed actions to identify signs of integration with AWS. This can be  
+   done as follows:  
+    **a.** Examine the History of Workflows Executed:
+
 - In the “Actions” tab of the repository, check the workflows that have already been executed
 - Observe the details of the executions, including logs showing the operations performed
 
-    **b.** Identify AWS Roles and Permissions in Logs:  
-    - Action logs can reveal:  
-        - Roles assumed during execution (role-to-assume)  
-        - Operations performed, such as listing S3 buckets or creating resources  
-    - Example: An execution log can directly indicate the ARN of the assumed role
+  **b.** Identify AWS Roles and Permissions in Logs:
+
+  - Action logs can reveal:
+    - Roles assumed during execution (role-to-assume)
+    - Operations performed, such as listing S3 buckets or creating resources
+  - Example: An execution log can directly indicate the ARN of the assumed role
     ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-011.png){:class="custom-image-class"}
     Identifying the role in the workflow logs after execution.
 
@@ -224,14 +232,16 @@ If the attacker already has some limited access to the AWS environment (e.g. rea
 
 Next, we'll demonstrate how to do this using the AWS CLI.
 
-**1. Checking Configured OIDC Providers**  
+**1. Checking Configured OIDC Providers**
 
 The first step is to list the OIDC identity providers configured in the AWS account. This can be done with the following command:
 
 ```js
 aws iam list-open-id-connect-providers
 ```
- Output:
+
+Output:
+
 ```js
 {
     "OpenIDConnectProviderList": [
@@ -241,9 +251,10 @@ aws iam list-open-id-connect-providers
     ]
 }
 ```
+
 In this case, we can see an OIDC provider linked to GitHub Actions (token.actions.githubusercontent.com), which we set up at the beginning of this text.
 
-**2. Listing Roles Associated with the OIDC Provider**  
+**2. Listing Roles Associated with the OIDC Provider**
 
 After identifying an OIDC provider, the next step is to list all the roles that use this identity provider in the Trust Policy.
 To do this, we use the following command:
@@ -251,42 +262,44 @@ To do this, we use the following command:
 ```js
 aws iam list-roles --query Roles[?AssumeRolePolicyDocument.Statement[?Principal.Federated]]
 ```
+
 Output:
+
 ```json
 [
-    {
-        "Path": "/",
-        "RoleName": "pacsec_github",
-        "RoleId": "AROAQ3EGVGMHNGFDDFZNB",
-        "Arn": "arn:aws:iam::058264466190:role/pacsec_github",
-        "CreateDate": "2025-01-14T12:33:04+00:00",
-        "AssumeRolePolicyDocument": {
-            "Version": "2012-10-17",
-            "Statement": [
-                {
-                    "Effect": "Allow",
-                    "Principal": {
-                        "Federated": "arn:aws:iam::058264466190:oidc-provider/token.actions.githubusercontent.com"
-                    },
-                    "Action": "sts:AssumeRoleWithWebIdentity",
-                    "Condition": {
-                        "StringLike": {
-                            "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
-                            "token.actions.githubusercontent.com:sub": "repo:PacificSecurity*"
-                        }
-                    }
-                }
-            ]
-        },
-        "Description": "",
-        "MaxSessionDuration": 3600
-    }
+  {
+    "Path": "/",
+    "RoleName": "pacsec_github",
+    "RoleId": "AROAQ3EGVGMHNGFDDFZNB",
+    "Arn": "arn:aws:iam::058264466190:role/pacsec_github",
+    "CreateDate": "2025-01-14T12:33:04+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Federated": "arn:aws:iam::058264466190:oidc-provider/token.actions.githubusercontent.com"
+          },
+          "Action": "sts:AssumeRoleWithWebIdentity",
+          "Condition": {
+            "StringLike": {
+              "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
+              "token.actions.githubusercontent.com:sub": "repo:PacificSecurity*"
+            }
+          }
+        }
+      ]
+    },
+    "Description": "",
+    "MaxSessionDuration": 3600
+  }
 ]
 ```
 
 In this output, we identify that the pacsec_github role is configured to be assumed by repositories that match the repo:PacificSecurity\* pattern.
 
-**3. Listing Role Permissions**  
+**3. Listing Role Permissions**
 
 Now that we know the role's name (pacsec_github), the next step is to list its permissions. This includes:
 
@@ -299,11 +312,10 @@ aws iam list-role-policies --role-name pacsec_github
 ```
 
 Output:
+
 ```json
 {
-    "PolicyNames": [
-        "pacsec-bucket"
-    ]
+  "PolicyNames": ["pacsec-bucket"]
 }
 ```
 
@@ -315,35 +327,34 @@ aws iam get-role-policy --role-name pacsec_github --policy-name pacsec-bucket
 ```
 
 Output:
+
 ```json
 {
-    "RoleName": "pacsec_github",
-    "PolicyName": "pacsec-bucket",
-    "PolicyDocument": {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Sid": "ListBucket",
-                "Effect": "Allow",
-                "Action": "s3:ListBucket",
-                "Resource": "arn:aws:s3:::pac-github"
-            },
-            {
-                "Sid": "ReadWriteObjects",
-                "Effect": "Allow",
-                "Action": [
-                    "s3:GetObject",
-                    "s3:PutObject"
-                ],
-                "Resource": "arn:aws:s3:::pac-github/*"
-            }
-        ]
-    }
+  "RoleName": "pacsec_github",
+  "PolicyName": "pacsec-bucket",
+  "PolicyDocument": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "ListBucket",
+        "Effect": "Allow",
+        "Action": "s3:ListBucket",
+        "Resource": "arn:aws:s3:::pac-github"
+      },
+      {
+        "Sid": "ReadWriteObjects",
+        "Effect": "Allow",
+        "Action": ["s3:GetObject", "s3:PutObject"],
+        "Resource": "arn:aws:s3:::pac-github/*"
+      }
+    ]
+  }
 }
 ```
+
 We can see that the pacsec_github role has permission to list (s3:ListBucket) and perform read/write operations (s3:GetObject, s3:PutObject) on the pac-github bucket.
 
-**4. Analyzing the Information Obtained**  
+**4. Analyzing the Information Obtained**
 
 Based on the mapped data:
 
@@ -360,7 +371,7 @@ This section will explore two practical ways of abusing this integration. The fi
 
 ### Example 1: Exploring the integration created
 
-**Step 1: Identify OIDC providers**  
+**Step 1: Identify OIDC providers**
 
 As we saw earlier, with read access, we can list the OIDC providers configured in the AWS account. In the previous topic, we identified the following vulnerable role that has permissions on S3:
 
@@ -424,6 +435,7 @@ We identified that the pacsec_github role can be assumed by any repository whose
     }
 }
 ```
+
 Based on these permissions, the role has the permission to list, read, and write in the pac-github bucket.
 
 **Step 2: Creating Malicious Workflows**
@@ -431,14 +443,15 @@ Based on these permissions, the role has the permission to list, read, and write
 Now that we know that any repository corresponding to the PacificSecurity\* standard can assume the role, we create a user on GitHub with the name PacificSecurityX and a repository called git_abuse within it. In the repository, we set up the following workflows:
 
 1. Workflow 1: List Bucket and Download File.  
-This workflow will be used to:
+   This workflow will be used to:
+
 - List the contents of the S3 bucket.
 - Download a file that contains a secret.
 - Display the contents of the file in the logs (simulating the extraction of sensitive information).
-![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-012.png){:class="custom-image-class"}
-Now let's run the action and observe the result:
-![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-013.png){:class="custom-image-class"}
-In the logs, we can see that we were able to list the contents of the bucket and extract the secret.txt file, which contains sensitive information.
+  ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-012.png){:class="custom-image-class"}
+  Now let's run the action and observe the result:
+  ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-013.png){:class="custom-image-class"}
+  In the logs, we can see that we were able to list the contents of the bucket and extract the secret.txt file, which contains sensitive information.
 
 2. Workflow 2: Extract Credentials from the Environment.
 
@@ -447,7 +460,7 @@ In this case, we want to extract the temporary credentials from the AWS role so 
 Now, running this action, we get the following result:
 ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-015.png){:class="custom-image-class"}
 With the credentials encoded in Base64, all you have to do is decode them locally:
-![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-016.png){:class="custom-image-class"}  
+![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-016.png){:class="custom-image-class"}
 
 After decoding them, we can use the AWS CLI to continue exploring the AWS environment with the permissions granted to the role.
 
@@ -455,7 +468,7 @@ After decoding them, we can use the AWS CLI to continue exploring the AWS enviro
 
 In this example, we will detail a real case observed in a Red Team exercise, where we exploited a client's GitHub-to-AWS integration to compromise their AWS infrastructure. This case is an excellent example of how vulnerabilities in GitHub Actions workflows can be exploited to take full control of an AWS account.
 
-**Scenario**  
+**Scenario**
 
 During the reconnaissance phase, we conducted OSINT to identify developers associated with the target organization on GitHub. With this information, we carried out a targeted phishing attack using Evilginx, a reverse proxy that intercepts credentials and session tokens. The attack featured the GitHub login page, and one of the organization's developers fell for the phishing attempt, allowing us to capture their session token.
 
@@ -467,25 +480,26 @@ With this, we established persistence in the AWS environment and took full contr
 
 (Stay tuned; we'll have other posts on this blog about persistence in AWS environments and Red Team operations in the cloud).
 
-**Simulating the Red Team exercise**  
+**Simulating the Red Team exercise**
 
 To simulate this scenario, we created a structure similar to the one we encountered during the exercise:
+
 - A GitHub repository configured for infrastructure deploys on AWS.
 - A role on AWS that grants administrative permissions and can be assumed by GitHub Actions.
 
-**Step 1: Repository identification**  
+**Step 1: Repository identification**
 
 In the image below, we can see an example of a repository related to infrastructure deployment:
 ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-017.png){:class="custom-image-class"}
 
-**Step 2: Workflow analysis**  
+**Step 2: Workflow analysis**
 
 In the image below, we show an example of a workflow configured in the repository, where the GitHub-to-AWS integration is used to perform infrastructure deploys:
 ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-018.png){:class="custom-image-class"}
 
 This workflow, named "Infrastructure Deployment," is triggered whenever there is a push on the repository's main branch. It uses the OIDC integration to assume the github_adm role on AWS and perform deployment operations using Terraform.
 
-**Step 3: Execution of the malicious workflow**  
+**Step 3: Execution of the malicious workflow**
 
 Based on the permissions of our compromised user, we created a malicious workflow in the same repository. This workflow was configured to capture temporary credentials from the role associated with the repository.
 
@@ -493,7 +507,7 @@ In the image below, we see the malicious workflow created and the result of its 
 ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-019.png){:class="custom-image-class"}
 ![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-020.png){:class="custom-image-class"}
 After obtaining the credentials, we access AWS with administrative privileges:
-![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-021.png){:class="custom-image-class"}  
+![image]({{ site.baseurl }}/assets/images/gen/content/cezar-gihub-to-aws-figure-021.png){:class="custom-image-class"}
 
 Below we can see the role that was abused in this example:
 
@@ -511,36 +525,41 @@ To reduce the risk associated with GitHub-to-AWS integration is essential to fol
 **1. The Principle of Least Privilege:**
 
 **AWS:**
+
 - Roles must have the minimum permissions necessary to perform the tasks assigned to them.
 - Avoid broad policies such as AdministratorAccess or unrestricted permissions (\*).
 - Use Service Control Policies (SCPs) to restrict activities on accounts linked to an AWS Organization.
 
 **Github:**
+
 - Limit access to repositories and workflows to only those users or teams who really need it.
 - Remove unnecessary permissions from members of the organization.
 
 **2. Secure Trust Policy Configuration:**  
-Configure the AWS role’s Trust Policy to restrict who can assume it:  
+Configure the AWS role’s Trust Policy to restrict who can assume it:
+
 - Limit access to a specific organization on GitHub.
 - Restrict the role to a specific repository and, if possible, a specific branch.
 
-**3. Restrictions on GitHub Workflows:**  
+**3. Restrictions on GitHub Workflows:**
 
 - Restrict who can create or modify workflows in the repository.
 - Configure workflow approval actions to manually validate the execution of critical workflows.
 - Check if workflows do not expose sensitive information, such as secrets or environment variables.
 
-**4. Strengthening GitHub Security:**  
+**4. Strengthening GitHub Security:**
 
 For those looking to dive deeper into securing GitHub Actions, it's worth exploring some of GitHub's advanced features designed to make life harder for attackers. These features, when appropriately configured, can significantly limit the ability of malicious actors to exploit workflows or push unauthorized changes:
+
 - Push Protection with Rulesets (GitHub Enterprise) - With push rulesets, you can restrict who can write to the .github directory in any repository across the organization. This is particularly useful to prevent unauthorized modifications to workflows or other sensitive files.
-[Push Rulesets](https://github.blog/changelog/2024-09-10-push-rules-are-now-generally-available-and-updates-to-custom-properties/)
+  [Push Rulesets](https://github.blog/changelog/2024-09-10-push-rules-are-now-generally-available-and-updates-to-custom-properties/)
 
 - CODEOWNERS - The CODEOWNERS file allows you to define ownership for specific files or directories. Combined with branch protection rules, only designated reviewers can approve changes to critical areas like .github/workflows.
-For more details, explore the following:
-[GitHub CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+  For more details, explore the following:
+  [GitHub CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
 
 By implementing these measures, it is possible to reduce the risk of exploiting a GitHub-to-AWS integration, thereby protecting both the infrastructure and the CI/CD processes.
+
 > ## Conclusion
 >
 > Compromising an organization's GitHub can serve as a gateway to compromising its AWS infrastructure. When misconfigured, the GitHub-to-AWS integration becomes a highly potent attack vector.
