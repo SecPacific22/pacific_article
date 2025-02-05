@@ -3,6 +3,7 @@ layout: default
 body_classes: page-post page-post-1
 ---
 
+
 <div class="section">
   <div class="container post-header">
     <div class="row justify-content-center">
@@ -31,42 +32,56 @@ body_classes: page-post page-post-1
 
         {% if page.authors %}
         <div class="post-authors">
-          {% for author in page.authors %}
-          {% assign author_id = author | replace: " ", "_" | downcase %}
-          {% assign author_object = site.data.authors[author_id] %}
-          {%
-          include framework/author.html
-          name=author_object.name
-          job=author_object.job
-          profile=author_object.profile
-          %}
+          <div class="post-authors">
+            {% for author in page.authors %}
+            {% assign author_id = author | replace: " ", "_" | downcase %}
+            {% assign author_object = site.data.authors[author_id] %}
+            {%
+            include framework/author.html
+            name=author_object.name
+            job=author_object.job
+            profile=author_object.profile
+            %}
 
-          <div class="social" id="social-author-post">
-            {% if author_object.social.linkedin_url %}
-            <a href="{{ author_object.social.linkedin_url }}" target="blank" title="Linkedin">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            {% endif %}
+            <div class="social" id="social-author-post">
+              {% if author_object.social.linkedin_url %}
+              <a href="{{ author_object.social.linkedin_url }}" target="blank" title="Linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              {% endif %}
 
-            {% if author_object.social.github_url %}
-            <a href="{{ author_object.social.github_url }}" target="blank" title="Github">
-              <i class="fab fa-github"></i>
-            </a>
-            {% endif %}
+              {% if author_object.social.github_url %}
+              <a href="{{ author_object.social.github_url }}" target="blank" title="Github">
+                <i class="fab fa-github"></i>
+              </a>
+              {% endif %}
 
-            {% if author_object.social.twitter_url %}
-            <a href="{{ author_object.social.twitter_url }}" target="blank" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            {% endif %}
+              {% if author_object.social.twitter_url %}
+              <a href="{{ author_object.social.twitter_url }}" target="blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              {% endif %}
 
-            {% if author_object.social.instagram_url %}
-            <a href="{{ author_object.social.instagram_url }}" target="blank" title="Instagram">
-              <i class="fab fa-instagram-square"></i>
-            </a>
-            {% endif %}
+              {% if author_object.social.instagram_url %}
+              <a href="{{ author_object.social.instagram_url }}" target="blank" title="Instagram">
+                <i class="fab fa-instagram-square"></i>
+              </a>
+              {% endif %}
+            </div>
           </div>
           {% endfor %}
+
+          <div id="copy-alert" class="copy-alert">
+            Article link copied successfully!
+          </div>
+
+          <button id="copy-link-button" class="copy-link-button" title="Copy article link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill-rule="evenodd"
+                d="M15.75 4.5a3 3 0 1 1 .825 2.066l-8.421 4.679a3.002 3.002 0 0 1 0 1.51l8.421 4.679a3 3 0 1 1-.729 1.31l-8.421-4.678a3 3 0 1 1 0-4.132l8.421-4.679a3 3 0 0 1-.096-.755Z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
         </div>
         {% endif %}
       </div>
@@ -106,3 +121,4 @@ body_classes: page-post page-post-1
   </div>
 </div>
 {% endif %}
+
