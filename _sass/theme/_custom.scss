@@ -6,7 +6,7 @@
 
 .title {
   margin-top: 80px;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -549,6 +549,8 @@ html[data-bs-theme="dark"] .blue-highlight {
     .post-authors {
       display: flex;
       flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       gap: 16px;
 
       .author {
@@ -578,7 +580,48 @@ html[data-bs-theme="dark"] .blue-highlight {
         border-radius: var(--card-border-radius);
       }
     }
+
+    .copy-link-button {
+      all: unset;
+
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+    }
+
+    .copy-link-button svg {
+      fill: #121418;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
+}
+
+.copy-alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background-color: #234123;
+  color: #f9fafb;
+  padding: 1rem 2rem;
+  border-radius: 0 0 5px 5px;
+  z-index: 1000;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  &.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+html[data-bs-theme="dark"] .page-post-1 .post-header .copy-link-button svg {
+  fill: #f9fafb !important;
 }
 
 .page-post-2 {
