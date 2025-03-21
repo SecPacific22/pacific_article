@@ -22,15 +22,15 @@ artur_marzano:
     twitter_url: https://twitter.com/MacmodSec
     instagram_url:
 
-joao_paulo:
-  title: "João Paulo"
-  name: "João Paulo"
-  job: "RedTeam Analyst"
+joao_paulo_assis:
+  title: "João Paulo Assis"
+  name: "João Paulo Assis"
+  job: "RedTeam Operator"
   profile: "https://lh3.googleusercontent.com/a-/ALV-UjXtwhLorRsES1uuEngBu6N_jVXYBFWR6qVNjCmzQmWOS_GTw77B=s80-p-k-rw-no"
   bio: ""
   social:
-    linkedin_url:
-    github_url:
+    linkedin_url: https://www.linkedin.com/in/jpassisalves/
+    github_url: https://github.com/j0hnZ3RA
     twitter_url:
     instagram_url:
 
