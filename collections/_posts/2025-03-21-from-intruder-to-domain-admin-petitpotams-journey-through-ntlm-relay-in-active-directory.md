@@ -20,11 +20,11 @@ But what exactly is this vulnerability? It’s a flaw associated with the <stron
 
 It’s worth noting that there are several other ways to combine this attack to exploit different flaws in Active Directory processes. However, the method I’ll be focusing on today is related to AD CS. AD CS is particularly interesting because it offers services and functionalities that, <strong>by default</strong>, accept NTLM-based authentication. These services specifically include the <strong>Certificate Authority Web Enrollment</strong> and the <strong>Certificate Enrollment Web Service</strong>.
 
-Alright, let’s get straight to the point. First of all, how can this vulnerability be identified? Thanks to the great CrackMapExec project, we have a module called PetitPotam at our disposal. This module essentially replicates the process carried out by the exploit, which involves performing an insufficient path check in the MS-EFSR protocol using the EfsRpcOpenFileRaw method. This method allows attackers to force the SYSTEM account to create an executable file of their choice, thereby granting local administrative privileges.
+Alright, let’s get straight to the point. First of all, how can this vulnerability be identified? Thanks to the great NetExec project, we have a module called PetitPotam at our disposal. This module essentially replicates the process carried out by the exploit, which involves performing an insufficient path check in the MS-EFSR protocol using the EfsRpcOpenFileRaw method. This method allows attackers to force the SYSTEM account to create an executable file of their choice, thereby granting local administrative privileges.
 
-Então podemos utilizar-se da seguinte sintaxe de comando:
+So, we can use the following command syntax:
 
-> crackmapexec smb $target-IP -u username -p password -d $DOMAIN -M PetitPotam
+> nxc smb $target-IP -u username -p password -M coerce_plus -o METHOD=PetitPotam
 
 If the system is vulnerable, you’ll see a result similar to this:
 
@@ -110,5 +110,3 @@ For more detailed information on mitigation, I recommend checking out the link b
    subtitle="Microsoft is aware of PetitPotam which can potentially be used to attack Windows domain controllers or other Windows servers."
    domain="support.microsoft.com"
 %}
-
-Stay happy, and happy hacking! :)
