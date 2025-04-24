@@ -5,13 +5,13 @@ date: "2025-03-21"
 authors: ["joao_paulo_assis"]
 categories: ["Pentesting", "Red Team", "Hacking", "Active Directory"]
 description:
-thumbnail: "/assets/images/posts/joao-paulo/1/1-cloudflare-zero-trust.webp"
-image: "define it"
+thumbnail: "/assets/images/posts/joao-paulo/2/petit_potam_tiny.png"
+image: "/assets/images/posts/joao-paulo/2/petit_potam_tiny.png"
 comments: false
 
 meta_title: "From Intruder to Domain Admin: PetitPotam's Journey Through NTLM Relay in Active Directory"
 meta_description:
-meta_image: "/assets/images/posts/joao-paulo/1/1-cloudflare-zero-trust.webp"
+meta_image: "/assets/images/posts/joao-paulo/2/petit_potam_tiny.png"
 ---
 
 Today, we’re going to discuss a vulnerability that has been known for some time, yet continues to be a thorn in the side of many domain administrators: the notorious <strong>PetitPotam</strong>.

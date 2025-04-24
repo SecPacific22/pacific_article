@@ -5,13 +5,13 @@ date: "2025-03-21"
 authors: ["joao_paulo_assis"]
 categories: ["Pentesting", "Security", "Red Team", "Bug Bounty"]
 description:
-thumbnail: "/assets/images/posts/joao-paulo/1/1-cloudflare-zero-trust.webp"
-image: "/assets/images/posts/joao-paulo/1/1-cloudflare-zero-trust.webp"
+thumbnail: "/assets/images/posts/joao-paulo/1/cloudflare_tiny.png"
+image: "/assets/images/posts/joao-paulo/1/cloudflare_tiny.png"
 comments: false
 
 meta_title: "Forbidden Bypass Cloudflare Zero Trust"
 meta_description:
-meta_image: "/assets/images/posts/joao-paulo/1/1-cloudflare-zero-trust.webp"
+meta_image: "/assets/images/posts/joao-paulo/1/cloudflare_tiny.png"
 ---
 
 The purpose of this post is to share a tip on how to proceed when you encounter a <strong>Cloudflare Zero Trust “Forbidden”</strong> screen during your tests. It is important to note that this does not represent a vulnerability in Cloudflare’s service, but rather improper configuration on the part of the companies using Zero Trust. Therefore, the results may vary and may not work for you in the same way as they did for me. At first, it may seem harmless, as just bypassing a 403 page and coming across an authentication screen may not seem very significant. However, if you manage to connect the dots and exploit a chain of vulnerabilities, you can get very promising results, as I did.
