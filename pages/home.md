@@ -23,7 +23,7 @@ posts:
   limit: 9
   sort: date # date | weight
   view_more_button_text: "More articles"
-  view_more_button_link: /blog
+  view_more_button_link: /articles
   view_more_button_icon: "fa-long-arrow-right"
   columns: 3 # 1 | 2 | 3 | 4
   show_authors: true

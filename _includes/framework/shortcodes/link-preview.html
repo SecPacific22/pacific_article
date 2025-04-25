@@ -1,0 +1,19 @@
+<figure class="link-preview"{% if include.full %} class="figure-full"{% endif %}>
+  <a href="{{ include.link }}" target="_blank" style="text-decoration:none; color:inherit;">
+    <div style="border:1px solid #ccc; border-radius:8px; overflow:hidden; width:100%; display:flex; flex-direction:column; font-family:sans-serif;">
+      <div style="padding:16px;">
+        {% if include.title %}
+          <h2 style="margin: 0 0 8px 0; font-size:20px;">{{ include.title }}</h2>
+        {% endif %}
+        {% if include.subtitle %}
+          <h3 style="margin: 0 0 8px 0; font-weight:normal; font-size:16px; color:#555;">
+            {{ include.subtitle }}
+          </h3>
+        {% endif %}
+        {% if include.domain %}
+          <p style="margin: 0; font-size:14px; color:gray;">{{ include.domain }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</figure>

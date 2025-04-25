@@ -585,6 +585,9 @@ html[data-bs-theme="dark"] .blue-highlight {
       }
     }
     .post-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 40px;
       img {
         margin-top: 20px;
