@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From Intruder to Domain Admin: PetitPotam's Journey Through NTLM Relay in Active Directory"
-date: "2025-03-21"
+date: "2025-04-25"
 authors: ["joao_paulo_assis"]
 categories: ["Pentesting", "Red Team", "Hacking", "Active Directory"]
 description:
