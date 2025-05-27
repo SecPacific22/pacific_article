@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Forbidden Bypass Cloudflare Zero Trust"
-date: "2025-03-21"
+date: "2025-05-27"
 authors: ["joao_paulo_assis"]
 categories: ["Pentesting", "Security", "Red Team", "Bug Bounty"]
 description:
