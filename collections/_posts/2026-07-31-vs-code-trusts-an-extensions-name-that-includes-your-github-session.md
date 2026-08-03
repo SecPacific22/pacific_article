@@ -3,7 +3,7 @@ layout: post
 title: "VS Code Trusts an Extension's Name. That Includes Your GitHub Session"
 date: "2026-07-31"
 authors: ["joao_paulo_assis"]
-categories: ["Security", "Hacking", "Bug Bounty", "Supply Chain Security"]
+categories: ["Security", "Hacking", "Red Team", "Supply Chain Security"]
 description:
 thumbnail: "/assets/images/posts/joao-paulo/3/header.webp"
 image: "/assets/images/posts/joao-paulo/3/header.webp"
