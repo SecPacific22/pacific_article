@@ -10,6 +10,7 @@ highlighter: rouge
 plugins:
   - jekyll-environment-variables
   - jekyll-paginate
+  - jekyll-sitemap
 
 paginate: 6
 paginate_path: "/blog/page/:num"
